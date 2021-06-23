@@ -339,6 +339,7 @@ function storeLeagueStandings(rows) {
 			} else {
 				let winrate = parseInt(row[3])+parseInt(row[4]);
 				winrate = parseInt(row[3])/winrate*100;
+				winrate = winrate.toFixed(2);
 				json += `"pct":"${winrate}%",`;
 			}
 			json += `"mapwin":"${row[6]}","maploss":"${row[7]}","maptie":"${row[8]}",`;
